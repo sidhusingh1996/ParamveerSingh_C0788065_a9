@@ -55,6 +55,18 @@ public class calculateGrossPay {
         // Calculate the commission
         double commission = commissionRate * sales / 100;
         double grossPay = commission - advance;
+        System.out.println("Total Commission: $" + commission);
 
+        if(grossPay > 0)
+        {
+            System.out.println("Final Commission (after deducting advance pay): $" + grossPay);
+        }
+        else if(grossPay < 0)
+        {
+            System.out.println("The sales person must reimburse  $" + (grossPay *- 1) + " back.");
+        }
+        else{
+            System.out.println("Neither PayCheck nor Reimbursing");
+        }
     }
 }
