@@ -52,5 +52,9 @@ public class calculateGrossPay {
             System.exit(1);
         }
 
+        // Calculate the commission
+        double commission = commissionRate * sales / 100;
+        double grossPay = commission - advance;
+
     }
 }
