@@ -23,5 +23,34 @@ public class calculateGrossPay {
         // Ask the user to enter the amount of advanced pay
         System.out.print("Enter the amount of advanced pay: ");
         double advance = scanner.nextDouble();
+
+        // Use the amount of monthly sales to determine the commission rate
+        double commissionRate = 0.0;
+        if(sales >= 0 && sales < 10000)
+        {
+            commissionRate = 5.0;
+        }
+        else if(sales >= 10000 && sales <= 14999)
+        {
+            commissionRate = 10.0;
+        }
+        else if(sales >= 15000 && sales <= 17999)
+        {
+            commissionRate = 12.0;
+        }
+        else if(sales >= 18000 && sales <= 21999)
+        {
+            commissionRate = 15.0;
+        }
+        else if(sales >= 22000 )
+        {
+            commissionRate = 16.0;
+        }
+        else
+        {
+            System.out.println("Value of sales should not be negative. Please enter any positive value.");
+            System.exit(1);
+        }
+
     }
 }
